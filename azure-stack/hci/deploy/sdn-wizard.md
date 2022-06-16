@@ -75,8 +75,8 @@ SDN Network Controller deployment is a functionality of the SDN Infrastructure e
 
 1. In Windows Admin Center, under **Tools**, select **Settings**, and then select **Extensions**.
 1. On the **Installed Extensions** tab, verify that the **SDN Infrastructure** extension is installed. If not, install it.
-1. In Windows Admin Center, under **Tools**, select **SDN Infrastructure**, then click **Get Started**.
-1. Under **Cluster settings**, under **Host**, enter a name for the Network Controller. This is the DNS name used by management clients (such as Windows Admin Center) to communicate with Network Controller. You can also use the default populated name.
+1. In Windows Admin Center, **Connect** to the Azure Stack HCI cluster, then under **Tools**, select **SDN Infrastructure**, then click **Get Started**.
+1. Under **Cluster settings**, under **Host**, enter a name for the Network Controller cluster. This is the DNS name used by management clients (such as Windows Admin Center) to communicate with Network Controller. You can also use the default populated name.
 
     :::image type="content" source="media/sdn/sdn-wizard.png" alt-text="SDN deployment wizard in Windows Admin Center" lightbox="media/sdn/sdn-wizard.png":::
 
@@ -122,7 +122,7 @@ SDN SLB deployment is a functionality of the SDN Infrastructure extension in Win
 1. In Windows Admin Center, under **Tools**, select **Settings**, and then select **Extensions**.
 
 1. On the **Installed Extensions** tab, verify that the **SDN Infrastructure** extension is installed. If not, install it.
-1. In Windows Admin Center, under **Tools**, select **SDN Infrastructure**, then click **Get Started** on the **Load Balancer** tab.
+1. In Windows Admin Center, **Connect** to the Azure Stack HCI cluster, then under **Tools**, select **SDN Infrastructure**, then click **Get Started** on the **Load Balancer** tab.
 1. Under **Load Balancer Settings**, under **Front-End subnets**, provide the following:
 
     - **Public VIP subnet prefix**. This could be public Internet subnets. They serve as the front end IP addresses for accessing workloads behind the load balancer, which use IP addresses from a private backend network.
@@ -158,7 +158,7 @@ SDN Gateway deployment is a functionality of the SDN Infrastructure extension in
 1. In Windows Admin Center, under **Tools**, select **Settings**, then select **Extensions**.
 
 1. On the **Installed Extensions** tab, verify that the **SDN Infrastructure** extension is installed. If not, install it.
-1. In Windows Admin Center, under **Tools**, select **SDN Infrastructure**, then click **Get Started** on the **Gateway** tab.
+1. In Windows Admin Center, **Connect** to the Azure Stack HCI cluster, then under **Tools**, select **SDN Infrastructure**, then click **Get Started** on the **Gateway** tab.
 1. Under **Define the Gateway Settings**, under **Tunnel subnets**, provide the **GRE Tunnel Subnets**. IP addresses from this subnet are used for provisioning on the SDN gateway VMs for GRE tunnels. If you don't plan to use GRE tunnels, put any placeholder subnets in this field.
 1. Under **BGP Router Settings**, enter the **SDN ASN** for the Gateway. This ASN is used to peer the gateway VMs with the Top of the Rack switches to advertise the GRE IP addresses. This field is auto populated to the SDN ASN used by SLB.
 1. Under **BGP Router Settings**, enter the **IP Address** and **ASN** of the Top of Rack switch. Gateway VMs need these settings to create a BGP peer with the switch. These fields are auto populated from the SLB deployment wizard. If you have an additional Top of Rack switch that you want to peer the gateway VMs with, add **IP Address** and **ASN** for that switch as well.
